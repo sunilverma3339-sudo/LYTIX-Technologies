@@ -2,6 +2,24 @@
 .DS_Store
 Thumbs.db
 
+# Logs and diagnostic reports
+logs/
+*.log
+*.err
+*.out
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
 # Local environment files
 .env
 .env.*
@@ -38,24 +56,57 @@ data/*.db
 data/*.sqlite
 data/*.sqlite3
 
-# Node / React / Vite
+# Node / React / Vite dependencies and caches
 node_modules/
 frontend/node_modules/
+jspm_packages/
+web_modules/
+bower_components/
+.npm/
+.pnpm-store/
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Build outputs
 dist/
 frontend/dist/
+out/
+.output/
+build/Release/
+lib-cov/
+coverage/
+*.lcov
+.nyc_output/
+
+# Framework and bundler caches
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.docusaurus/
+.serverless/
+.firebase/
+.fusebox/
+.grunt/
+.temp/
+**/.vitepress/dist/
+**/.vitepress/cache/
 .vite/
 frontend/.vite/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 
-# Logs
-*.log
-*.err
-*.out
-
-# Generated files and local workspaces
+# Generated files and local Codex workspaces
 outputs/
 work/
 .uv-cache/
@@ -65,5 +116,13 @@ work/
 # Editor / IDE
 .idea/
 .vscode/
+.vscode-test/
 *.swp
 *.swo
+.node_repl_history
+.tern-port
+
+# Misc local services
+.dynamodb/
+*.tgz
+.lock-wscript
